@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DamnStar/trending</title>
+    <style>
+        #trendcont {
+            width: 90%;
+            margin: 100px auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(auto, 150px);
+            gap: 20px;
+
+
+        }
+
+        #mdiv {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 10px;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white
+        }
+
+        #mdiv>img {
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        body {
+            margin: 0;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            height: 100vh;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        #navbar {
+            height: 70px;
+            width: 100%;
+            background-color: black;
+            color: white;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d-flex flex-column justify-content-center w-100 h-100">
+
+        <div class="d-flex flex-column justify-content-center align-items-center">
+
+            <div class="btn-group my-5">
+
+            </div>
+            <a href="https://manuel.pinto.dev" class="text-decoration-none">
+
+            </a>
+        </div>
+    </div>
+    </div>
+    <div id="navbar">Movies In Trending</div>
+    <div id="trendcont"></div>
+</body>
+
+</html>
+<script src="trend.js"></script>

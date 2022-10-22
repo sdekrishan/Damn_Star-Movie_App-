@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DamnStar</title>
+  <style>
+    #navbar {
+      height: 70px;
+      width: 100%;
+      background-color: black;
+      color: white;
+      font-size: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    input {
+      width: 300px;
+      margin-top: 20px;
+      height: 30px;
+      padding-left: 20px;
+    }
+
+    #movies {
+      position: absolute;
+      top: 127px;
+      height: 50vh;
+      width: 325px;
+      overflow: scroll;
+      z-index: 1;
+    }
+
+    #movies::-webkit-scrollbar {
+      display: none;
+    }
+
+    #mdiv {
+      height: 100px;
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: space-between;
+      border: 2px solid blue;
+      background-color: black;
+    }
+
+    #mdiv>#mimg {
+      border: 2px solid gold;
+      width: 100px;
+    }
+
+    #mname {
+      width: 60%;
+      text-align: center;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white
+    }
+
+    #mname:hover {
+      color: gold;
+    }
+
+    #cont {
+      position: relative;
+      height: 500px;
+      top: 100px;
+      width: 90%;
+      margin: auto;
+      display: flex;
+
+    }
+
+    #imgdiv {
+      width: 40%;
+      border: 3px solid blue;
+    }
+
+    #imgdiv>img {
+      height: 100%;
+      width: 100%;
+    }
+
+    #pdiv {
+      width: 60%;
+      border: 3px solid gold;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+
+    }
+
+    #contp {
+      font-size: 30px;
+      color: white;
+    }
+
+    #conttype {
+      font-size: 25px;
+      color: white;
+    }
+
+    #contyear {
+      font-size: 22px;
+      color: white;
+    }
+
+    #trend {
+      width: 90px;
+      height: 35px;
+      background-color: black;
+      color: white;
+      margin-left: -5px
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      height: 100vh;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="d-flex flex-column justify-content-center w-100 h-100">
+
+    <div class="d-flex flex-column justify-content-center align-items-center">
+
+      <div class="btn-group my-5">
+
+      </div>
+      <a href="https://manuel.pinto.dev" class="text-decoration-none">
+
+      </a>
+    </div>
+  </div>
+  </div>
+  <div id="navbar">
+    DamnStar
+  </div>
+
+  <input type="text" id="query" oninput="debounce(main,500)" placeholder="Enter Name" />
+  <button id="trend">Trending</button>
+
+  <div id="cont"></div>
+</body>
+
+</html>
+<script src="index.js"></script>
